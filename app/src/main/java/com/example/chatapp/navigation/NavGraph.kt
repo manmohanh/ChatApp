@@ -23,7 +23,7 @@ fun NavGraph(navController:NavHostController) {
             LoginScreen(navController = navController)
         }
         composable(NavRoutes.Register.route){
-            RegisterScreen()
+            RegisterScreen(navController = navController)
         }
         composable(NavRoutes.BottomNav.route){
             BottomNavBar(navController = navController)
