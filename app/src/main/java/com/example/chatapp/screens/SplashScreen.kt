@@ -2,6 +2,7 @@ package com.example.chatapp.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -20,7 +21,7 @@ fun SplashScreen(navController:NavHostController) {
 
     LaunchedEffect(key1 = true){
         delay(3000)
-        navController.navigate(NavRoutes.BottomNav.route)
+        navController.navigate(NavRoutes.Login.route)
     }
     Box(
         modifier = Modifier
@@ -31,7 +32,8 @@ fun SplashScreen(navController:NavHostController) {
             text = "ChatApp",
             style = TextStyle(
                 fontSize = 28.sp,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onBackground
             )
         )
     }
