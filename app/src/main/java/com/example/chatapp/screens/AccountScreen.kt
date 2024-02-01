@@ -70,8 +70,8 @@ fun AccountScreen() {
                     modifier = Modifier.padding(start = 12.dp, top = 8.dp),
                     verticalArrangement = Arrangement.Center
                 ) {
-                    Text(text = "Manmohan Hansda")
-                    Text(text = "hmanmohan12@gmail.com")
+                    Text(text = "Abc")
+                    Text(text = "abc@gmail.com")
                 }
             }
             Divider(modifier = Modifier.padding(horizontal = 16.dp))
