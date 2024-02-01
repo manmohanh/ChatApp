@@ -12,6 +12,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -19,6 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
@@ -51,7 +53,11 @@ fun LoginScreen(navController:NavHostController) {
                 value = emailState,
                 onValueChange = { emailState = it },
                 placeholder = { Text(text = "Email") },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                colors = TextFieldDefaults.colors(
+                    unfocusedIndicatorColor = Color.Transparent,
+                    focusedIndicatorColor = MaterialTheme.colorScheme.onBackground
+                )
             )
             Spacer(modifier = Modifier.height(10.dp))
             OutlinedTextField(
@@ -59,7 +65,11 @@ fun LoginScreen(navController:NavHostController) {
                 onValueChange = { passwordState = it },
                 placeholder = { Text(text = "Password") },
                 visualTransformation = PasswordVisualTransformation(),
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                colors = TextFieldDefaults.colors(
+                    unfocusedIndicatorColor = Color.Transparent,
+                    focusedIndicatorColor = MaterialTheme.colorScheme.onBackground
+                )
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -71,7 +81,7 @@ fun LoginScreen(navController:NavHostController) {
             ) {
                 Text(
                     text = "Sign In",
-                    color = MaterialTheme.colorScheme.onBackground
+                    color = Color.White
                 )
             }
 

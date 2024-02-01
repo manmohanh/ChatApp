@@ -25,6 +25,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -48,7 +49,8 @@ fun HomeScreen(navController:NavHostController) {
                 text = "ChatApp",
                 style = TextStyle(
                     fontSize = 28.sp,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White
                 )
             ) },
             colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = MaterialTheme.colorScheme.primary),
@@ -140,13 +142,10 @@ fun UserCard(onClick:() -> Unit) {
                 top = 10.dp
             )) {
             Text(
-                text = "Manmohan Hansda",
-                style = TextStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp
-                )
+                text = "Abc",
+
             )
-            Text(text = "This is a text", style = TextStyle(fontSize = 13.sp))
+            Text(text = "fdsf greg bfdb", style = TextStyle(fontSize = 13.sp, color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)))
         }
     }
 }

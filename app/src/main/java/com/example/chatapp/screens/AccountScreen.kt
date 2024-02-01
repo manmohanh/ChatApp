@@ -46,7 +46,8 @@ fun AccountScreen() {
             text = "Account",
             style = TextStyle(
                 fontWeight = FontWeight.Bold,
-                fontSize = 28.sp
+                fontSize = 28.sp,
+                color = Color.White
             )
         ) },
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = MaterialTheme.colorScheme.primary)
